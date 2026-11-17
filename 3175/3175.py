@@ -11,7 +11,7 @@ class Solution:
                 count=1
             else:   #win
                 count+=1
-                if(count==k):
-                    return cur[1]
                 rotate.append(arr[i])
+            if(count==k):
+                    return cur[1]
         return cur[1]
