@@ -16,7 +16,7 @@ class Solution:
                 r+=1
                 taken.add(n)
                 n+=1
-            #smaller
+            ##smaller
             n=each
             n-=1
             while(n in d):
