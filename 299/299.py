@@ -19,3 +19,4 @@ class Solution:
                     record[guess[j]]-=1
                     if(record[guess[j]]==0):
                         del record[guess[j]]
+        return str(bulls)+"A"+str(cows)+"B"
