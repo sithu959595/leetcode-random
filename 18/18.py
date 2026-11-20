@@ -14,11 +14,11 @@ class Solution:
                         t=[nums[i],nums[j],nums[k],find]
                         t.sort()
                         t=tuple(t)
-                        record.add(t)
-                        print(t,record)
+                        # print(t,record)
                         if(t not in record):
                             print("*")
                             res.append([nums[i],nums[j],nums[k],find])
+                        record.add(t)
                     d.add(nums[k])
         return res
 

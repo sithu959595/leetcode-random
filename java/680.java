@@ -1,6 +1,7 @@
 class Solution {
     public boolean validPalindrome(String s) {
         boolean[] chance=new boolean[1]; 
+        chance[0]=true;
         return recur(chance, s,0,s.length()-1);
     }
     private boolean recur(boolean[] chance,String s,int l,int r){
