@@ -10,15 +10,16 @@ class Solution:
         while(h):
             l+=1
             h=h.next
-        cur=head
-        target=l-n+1
+        cur=ListNode(None,head)
+        tem=cur
+        target=l-n+2
         p=0
         pre=None
         while(True):
             p+=1
             if(p==target):
-                pre=cur.next
+                pre.next=cur.next
                 cur.next=None
-                return head
+                return tem.next
             pre=cur
             cur=cur.next

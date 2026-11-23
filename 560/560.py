@@ -1,23 +1,14 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        l=r=0
-        s=nums[l]
+        h={}
+        h[0]=1
+        cur=0
         res=0
-        while(r<len(nums)):
-            if(s==k):
-                if(r>=l):
-                    res+=1
-                r+=1
-                if(r<len(nums)):
-                    s+=nums[r]
-            elif(s>k):
-                while(s>k):
-                    s-=nums[l]
-                    l+=1
-            else:
-                r+=1
-                if(r<len(nums)):
-                    s+=nums[r]
+        for i in range(len(nums)):
+            cur+=nums[i]
+            find=cur-k
+            res+=h.get(find,0)
+            h[cur]=h.get(cur,0)+1
         return res
 
 

@@ -12,18 +12,21 @@ class Solution:
                     l+=1
                 r+=1
             else: #3,2
-
-
-            if(nums[r-1]+1!=nums[r]):
                 while(l!=r):
                     if(l+k-1<len(nums)):
                         res.append(-1)
                     l+=1
-                r+=1
-            else:  #2,3
-                curl=r-l+1
-                if(curl==k):
-                    res.append(nums[r])
-                    l+=1
-                r+=1
+
+            # if(nums[r-1]+1!=nums[r]):
+            #     while(l!=r):
+            #         if(l+k-1<len(nums)):
+            #             res.append(-1)
+            #         l+=1
+            #     r+=1
+            # else:  #2,3
+            #     curl=r-l+1
+            #     if(curl==k):
+            #         res.append(nums[r])
+            #         l+=1
+            #     r+=1
         return res
