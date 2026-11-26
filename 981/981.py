@@ -8,7 +8,7 @@ class TimeMap:
         while(l<=r):
             m=(l+r)//2
             if(arr[m][0]==target):
-                print("*",arr,target,arr[m][1])
+                # print("*",arr,target,arr[m][1])
                 return arr[m][1]
             elif(target<arr[m][0]):
                 r=m-1
@@ -17,12 +17,12 @@ class TimeMap:
         # if(l<0):
         #     return ""
         if(l>=len(arr)):
-            print("**",arr,target,arr[-1][1])
+            # print("**",arr,target,arr[-1][1])
             return arr[-1][1]
         elif(l==0):
             return ""
         else:
-            print("***",arr,target,arr[l-1][1])
+            # print("***",arr,target,arr[l-1][1])
             return arr[l-1][1]
 
 

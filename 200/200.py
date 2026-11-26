@@ -13,6 +13,7 @@ class Solution:
         res=0
         for rr in range(len(grid)):
             for cc in range(len(grid[0])):
-                if(grid[rr][cc]=="1"):
+                if(grid[rr][cc]=="1" and not visited[rr][cc]):
                     res+=1
                     dfs([rr,cc])
+        return res

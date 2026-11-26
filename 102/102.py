@@ -28,6 +28,6 @@ class Solution:
             if(not count):
                 count=nextC
                 nextC=0
-                curArr=[]
                 res.append(curArr)
+                curArr=[]
         return res
