@@ -27,8 +27,8 @@ class TaskManager:
         # print(taskId,self.valid)
 
     def execTop(self) -> int:
-        cur=heapq.heappop(self.h)
-        while(cur[1] not in self.valid or cur[0]!=self.valid[cur[1]][0] or cur[2]!=self.valid[cur[1]][1]): #was it removed or stalled
+        cur=None
+        while(not cur or cur[1] not in self.valid or cur[0]!=self.valid[cur[1]][0] or cur[2]!=self.valid[cur[1]][1]): #was it removed or stalled
             if(not self.h):
                 return -1
             cur=heapq.heappop(self.h)
@@ -36,6 +36,7 @@ class TaskManager:
         del self.valid[cur[1]]
         return cur[2]
             
+
 
 # Your TaskManager object will be instantiated and called as such:
 # obj = TaskManager(tasks)
